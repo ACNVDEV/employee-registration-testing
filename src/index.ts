@@ -1,6 +1,6 @@
-import { registerEmployee } from '#services/register-employee.js';
+import { processRegistration } from '#application/registration-flow.js';
 
-const validResult = registerEmployee({
+const validResult = processRegistration({
   code: '001',
   name: 'Ana Pérez',
   employeeType: 1,
@@ -9,7 +9,7 @@ const validResult = registerEmployee({
 
 console.log(validResult);
 
-const invalidResult = registerEmployee({
+const invalidResult = processRegistration({
   code: '000',
   name: 'Ana Pérez',
   employeeType: 1,
