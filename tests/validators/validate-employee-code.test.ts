@@ -46,4 +46,18 @@ describe('validateEmployeeCode - equivalence partitioning', () => {
 
     expect(result.valid).toBe(false);
   });
+
+  it('rejects a numeric value', () => {
+    expect(validateEmployeeCode(123)).toEqual({
+      valid: false,
+      error: 'El código del empleado debe ser un texto de 3 dígitos.',
+    });
+  });
+
+  it('rejects null', () => {
+    expect(validateEmployeeCode(null)).toEqual({
+      valid: false,
+      error: 'El código del empleado debe ser un texto de 3 dígitos.',
+    });
+  });
 });
