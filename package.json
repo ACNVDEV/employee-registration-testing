@@ -7,8 +7,8 @@
   "author": "Andrés Camilo Naranjo Vargas",
   "packageManager": "pnpm@10.10.0",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
     "start": "node dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
