@@ -1,8 +1,19 @@
-import { validateInstitutionTime } from '#validators/validate-institution-time.js';
+import { registerEmployee } from '#services/register-employee.js';
 
-console.log(validateInstitutionTime(1));
-console.log(validateInstitutionTime(600));
-console.log(validateInstitutionTime(0));
-console.log(validateInstitutionTime(601));
-console.log(validateInstitutionTime(12.5));
-console.log(validateInstitutionTime('12'));
+const validResult = registerEmployee({
+  code: '001',
+  name: 'Ana Pérez',
+  employeeType: 1,
+  monthsInInstitution: 120,
+});
+
+console.log(validResult);
+
+const invalidResult = registerEmployee({
+  code: '000',
+  name: 'Ana Pérez',
+  employeeType: 1,
+  monthsInInstitution: 120,
+});
+
+console.log(invalidResult);
