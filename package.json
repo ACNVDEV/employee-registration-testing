@@ -1,0 +1,26 @@
+{
+  "name": "employee-registration-testing",
+  "version": "0.1.0",
+  "description": "Prototipo académico en TypeScript para aplicar técnicas de pruebas de software al registro de empleados.",
+  "private": false,
+  "type": "module",
+  "author": "Andrés Camilo Naranjo Vargas",
+  "packageManager": "pnpm@10.10.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "engines": {
+    "node": ">=22.12.0 <27"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.2",
+    "@vitest/coverage-v8": "5.0.1",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  }
+}
