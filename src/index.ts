@@ -1,7 +1,3 @@
-import { transitionRegistrationState } from '#application/registration-state-machine.js';
+import { runRegistrationConsole } from '#application/run-registration-console.js';
 
-console.log(transitionRegistrationState('START', 'START_REGISTRATION'));
-
-console.log(transitionRegistrationState('CAPTURING', 'SUBMIT_DATA'));
-
-console.log(transitionRegistrationState('VALIDATING', 'VALIDATION_SUCCEEDED'));
+await runRegistrationConsole();
