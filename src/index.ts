@@ -1,6 +1,8 @@
-import { validateEmployeeType } from '#validators/validate-employee-type.js';
+import { validateInstitutionTime } from '#validators/validate-institution-time.js';
 
-console.log(validateEmployeeType(0));
-console.log(validateEmployeeType(1));
-console.log(validateEmployeeType(2));
-console.log(validateEmployeeType('1'));
+console.log(validateInstitutionTime(1));
+console.log(validateInstitutionTime(600));
+console.log(validateInstitutionTime(0));
+console.log(validateInstitutionTime(601));
+console.log(validateInstitutionTime(12.5));
+console.log(validateInstitutionTime('12'));
