@@ -3,6 +3,7 @@ import { createInterface } from 'node:readline/promises';
 
 import type { EmployeeInput } from '#domain/employee-input.js';
 
+import { parseNumericInput } from '#application/parse-numeric-input.js';
 import { processRegistration } from '#application/registration-flow.js';
 
 export const runRegistrationConsole = async (): Promise<void> => {
@@ -29,8 +30,8 @@ export const runRegistrationConsole = async (): Promise<void> => {
       const employeeInput: EmployeeInput = {
         code,
         name,
-        employeeType: Number(employeeTypeInput),
-        monthsInInstitution: Number(institutionTimeInput),
+        employeeType: parseNumericInput(employeeTypeInput),
+        monthsInInstitution: parseNumericInput(institutionTimeInput),
       };
 
       const registration = processRegistration(employeeInput);
