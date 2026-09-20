@@ -1,8 +1,7 @@
-import { parseNumericInput } from '#application/parse-numeric-input.js';
+import { transitionRegistrationState } from '#application/registration-state-machine.js';
 
-console.log(parseNumericInput(''));
-console.log(parseNumericInput(' '));
-console.log(parseNumericInput('0'));
-console.log(parseNumericInput('1'));
-console.log(parseNumericInput('12.5'));
-console.log(parseNumericInput('doce'));
+console.log(transitionRegistrationState('START', 'START_REGISTRATION'));
+
+console.log(transitionRegistrationState('CAPTURING', 'SUBMIT_DATA'));
+
+console.log(transitionRegistrationState('VALIDATING', 'VALIDATION_SUCCEEDED'));
