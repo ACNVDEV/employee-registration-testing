@@ -68,8 +68,20 @@ describe('registration state machine', () => {
         event: 'RETRY' as const,
       },
       {
+        state: 'ERROR' as const,
+        event: 'FINISH' as const,
+      },
+      {
         state: 'FINISHED' as const,
         event: 'START_REGISTRATION' as const,
+      },
+      {
+        state: 'REGISTERED' as const,
+        event: 'RETRY' as const,
+      },
+      {
+        state: 'FINISHED' as const,
+        event: 'FINISH' as const,
       },
     ])('rejects $state + $event', ({ state, event }) => {
       expect(() => transitionRegistrationState(state, event)).toThrow(
