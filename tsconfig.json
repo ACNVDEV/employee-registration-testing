@@ -10,7 +10,13 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "paths": {
+      "#domain/*": ["./src/domain/*"],
+      "#validators/*": ["./src/validators/*"],
+      "#services/*": ["./src/services/*"],
+      "#application/*": ["./src/application/*"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["dist", "coverage", "node_modules"]

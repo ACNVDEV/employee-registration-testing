@@ -22,5 +22,11 @@
     "@vitest/coverage-v8": "5.0.1",
     "typescript": "7.0.2",
     "vitest": "5.0.1"
+  },
+  "imports": {
+    "#domain/*": "./dist/domain/*",
+    "#validators/*": "./dist/validators/*",
+    "#services/*": "./dist/services/*",
+    "#application/*": "./dist/application/*"
   }
 }
