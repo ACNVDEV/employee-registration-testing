@@ -1,7 +1,6 @@
-import { validateEmployeeName } from '#validators/validate-employee-name.js';
+import { validateEmployeeType } from '#validators/validate-employee-type.js';
 
-console.log(validateEmployeeName('Andrés Naranjo'));
-console.log(validateEmployeeName(''));
-console.log(validateEmployeeName('     '));
-console.log(validateEmployeeName('a'.repeat(30)));
-console.log(validateEmployeeName('a'.repeat(31)));
+console.log(validateEmployeeType(0));
+console.log(validateEmployeeType(1));
+console.log(validateEmployeeType(2));
+console.log(validateEmployeeType('1'));
