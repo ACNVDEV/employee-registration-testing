@@ -1,5 +1,6 @@
-import type { EmployeeType } from '#domain/employee-type.js';
+import { validateEmployeeCode } from '#validators/validate-employee-code.js';
 
-const employeeType: EmployeeType = 1;
-
-console.log(`Employee type: ${employeeType}`);
+console.log(validateEmployeeCode('001'));
+console.log(validateEmployeeCode('000'));
+console.log(validateEmployeeCode('999'));
+console.log(validateEmployeeCode('1000'));
