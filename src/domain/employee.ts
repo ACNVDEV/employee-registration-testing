@@ -1,6 +1,6 @@
 import type { EmployeeType } from '#domain/employee-type.js';
 
-export interface Employe {
+export interface Employee {
   code: string;
   name: string;
   employeeType: EmployeeType;
